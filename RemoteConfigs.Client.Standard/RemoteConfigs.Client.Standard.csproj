@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>RemoteConfigs Inc</Authors>
+    <Company>RemoteConfigs Inc</Company>
+    <Product>RemoteConfigs C# Client Library</Product>
+    <PackageIconUrl>https://remoteconfigs.com/app/images/favicon.ico</PackageIconUrl>
+    <PackageProjectUrl>https://api.remoteconfigs.com/</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageTags>C#, remote, configs, remoteConfigs, RemoteConfigs, Red, Ruby, Red Ruby IT</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
