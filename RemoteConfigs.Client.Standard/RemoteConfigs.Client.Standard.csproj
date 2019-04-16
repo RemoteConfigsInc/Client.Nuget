@@ -5,10 +5,11 @@
     <Authors>RemoteConfigs Inc</Authors>
     <Company>RemoteConfigs Inc</Company>
     <Product>RemoteConfigs C# Client Library</Product>
-    <PackageIconUrl>https://remoteconfigs.com/app/images/favicon.ico</PackageIconUrl>
+    <PackageIconUrl>https://remoteconfigs.com/landing/images/Remoteconfigs%20cog.png</PackageIconUrl>
     <PackageProjectUrl>https://api.remoteconfigs.com/</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageTags>C#, remote, configs, remoteConfigs, RemoteConfigs, Red, Ruby, Red Ruby IT</PackageTags>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
