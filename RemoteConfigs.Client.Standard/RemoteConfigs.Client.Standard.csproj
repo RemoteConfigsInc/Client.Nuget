@@ -9,7 +9,7 @@
     <PackageProjectUrl>https://api.remoteconfigs.com/</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageTags>C#, remote, configs, remoteConfigs, RemoteConfigs, Red, Ruby, Red Ruby IT</PackageTags>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
