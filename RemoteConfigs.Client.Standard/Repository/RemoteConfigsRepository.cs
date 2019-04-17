@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using RemoteConfigs.Client.Standard.Contract;
 using RemoteConfigs.Client.Standard.Repository.Interface;
 using System;
 using System.Collections.Generic;
@@ -7,10 +6,11 @@ using System.IO;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using RemoteConfigs.Client.Domain.Contract;
 
 namespace RemoteConfigs.Client.Standard.Repository
 {
-    public class HttpRepository : IHttpRepository
+    public class RemoteConfigsRepository : IRemoteConfigsRepository
     {
         private readonly string _apiKey;
 
@@ -21,7 +21,7 @@ namespace RemoteConfigs.Client.Standard.Repository
         private const string ConfigurationsObjectEndpoint = "Object";
         private const string HeaderKey = "apikey";
 
-        public HttpRepository(string apiKey)
+        public RemoteConfigsRepository(string apiKey)
         {
             _apiKey = apiKey;
 

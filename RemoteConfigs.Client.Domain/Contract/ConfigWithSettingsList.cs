@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace RemoteConfigs.Client.Standard.Contract
+namespace RemoteConfigs.Client.Domain.Contract
 {
     public class ConfigWithSettingsList : BaseConfig
     {

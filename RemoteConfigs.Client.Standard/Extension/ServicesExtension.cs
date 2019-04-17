@@ -9,12 +9,12 @@ namespace RemoteConfigs.Client.Standard.Extension
     {
         public static void AddRemoteConfigs(this IServiceCollection service, string apiKey)
         {
-            service.AddTransient<IHttpRepository>(construct => new HttpRepository(apiKey));
+            service.AddTransient<IRemoteConfigsRepository>(construct => new RemoteConfigsRepository(apiKey));
         }
 
-        public static void AddRemoteConfigs<T>(this IServiceCollection service, string apiKey) where T : class, IHttpRepository, new()
+        public static void AddRemoteConfigs<T>(this IServiceCollection service, string apiKey) where T : class, IRemoteConfigsRepository, new()
         {
-            service.AddTransient<IHttpRepository>(construct => (T)Activator.CreateInstance(typeof(T), apiKey));
+            service.AddTransient<IRemoteConfigsRepository>(construct => (T)Activator.CreateInstance(typeof(T), apiKey));
         }
     }
 }

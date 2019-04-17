@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using RemoteConfigs.Client.Standard.Contract;
+using RemoteConfigs.Client.Domain.Contract;
 
 namespace RemoteConfigs.Client.Standard.Repository.Interface
 {
-    public interface IHttpRepository
+    public interface IRemoteConfigsRepository
     {
         Task<List<ConfigWithSettingsList>> GetAllConfigs();
         Task<ConfigWithSettingsList> GetConfig(string uniqueId);

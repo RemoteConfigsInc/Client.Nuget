@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using RemoteConfigs.Client.Standard.Contract;
+using RemoteConfigs.Client.Domain.Contract;
 using RemoteConfigs.Client.Standard.Repository;
 using RemoteConfigs.Client.Standard.Repository.Interface;
 
@@ -10,18 +9,18 @@ namespace RemoteConfigs.Client.Test
 {
     public class ConfigTest
     {
-        private IHttpRepository _httpRepo;
+        private IRemoteConfigsRepository _remoteConfigsRepo;
 
         [SetUp]
         public void Setup()
         {
-            _httpRepo = new HttpRepository("RC_c5df336238433443e775c575d423c37ad998bac5");
+            _remoteConfigsRepo = new RemoteConfigsRepository("RC_c5df336238433443e775c575d423c37ad998bac5");
         }
 
         [Test]
         public async Task GetAllConfigsTest()
         {
-            List<ConfigWithSettingsList> allConfigs = await _httpRepo.GetAllConfigs();
+            List<ConfigWithSettingsList> allConfigs = await _remoteConfigsRepo.GetAllConfigs();
 
             Assert.NotNull(allConfigs);
             Assert.NotZero(allConfigs.Count);
@@ -32,7 +31,7 @@ namespace RemoteConfigs.Client.Test
         [TestCase("be4671bc")]
         public async Task GetSpecificConfigTest(string uniqueId)
         {
-            ConfigWithSettingsList config = await _httpRepo.GetConfig(uniqueId);
+            ConfigWithSettingsList config = await _remoteConfigsRepo.GetConfig(uniqueId);
 
             Assert.NotNull(config);
             Assert.NotNull(config.Settings);
@@ -44,7 +43,7 @@ namespace RemoteConfigs.Client.Test
         [TestCase("be4671bc")]
         public async Task GetConfigAsObjectTest(string uniqueId)
         {
-            ConfigWithSettingObject<Dictionary<string, string>> config = await _httpRepo.GetConfigAsObject<Dictionary<string, string>>(uniqueId);
+            ConfigWithSettingObject<Dictionary<string, string>> config = await _remoteConfigsRepo.GetConfigAsObject<Dictionary<string, string>>(uniqueId);
 
             Assert.NotNull(config);
             Assert.NotNull(config.Settings);
@@ -71,7 +70,7 @@ namespace RemoteConfigs.Client.Test
                 }
             };
 
-            ConfigWithSettingsList config = await _httpRepo.CreateConfig(newConfig);
+            ConfigWithSettingsList config = await _remoteConfigsRepo.CreateConfig(newConfig);
 
             Assert.NotNull(config);
             Assert.AreEqual(config.Name, name);
@@ -103,7 +102,7 @@ namespace RemoteConfigs.Client.Test
                 }
             };
 
-            ConfigWithSettingsList config = await _httpRepo.UpdateConfig(uniqueId, newConfig);
+            ConfigWithSettingsList config = await _remoteConfigsRepo.UpdateConfig(uniqueId, newConfig);
 
             Assert.NotNull(config);
             Assert.AreEqual(config.Name, name);
@@ -118,7 +117,7 @@ namespace RemoteConfigs.Client.Test
         [TestCase("09ddd3bd")]
         public async Task DeleteConfigTest(string uniqueId)
         {
-            string config = await _httpRepo.DeleteConfig(uniqueId);
+            string config = await _remoteConfigsRepo.DeleteConfig(uniqueId);
 
             Assert.NotNull(config);
             Assert.Pass();
