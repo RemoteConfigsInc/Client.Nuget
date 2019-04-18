@@ -6,6 +6,7 @@
 <br />
 
 <div align="center">
+  <h1>This repo is for the Nuget package</h1>
   <h3>
     <a href="https://remoteconfigs.com">
       Website
@@ -19,5 +20,7 @@
 
 <br>
 
-![Build status](https://redrubyit.visualstudio.com/RemoteConfigs/_apis/build/status/RemoteConfigs%20-%20Staging%20-%20CI)
-![Deployment status](https://redrubyit.vsrm.visualstudio.com/_apis/public/Release/badge/5bf414cb-f023-4c36-aba0-c3af1dc61ea1/2/2)
+<img src="https://www.nuget.org/Content/gallery/img/logo-header.svg" style="display: block; margin-left: auto; margin-right: auto; height: 80px; color: #BF2026;"/>
+
+![Build status](https://redrubyit.visualstudio.com/RemoteConfigs/_apis/build/status/RemoteConfigs.Nuget%20-%20Production)
+![Deployment status](https://redrubyit.vsrm.visualstudio.com/_apis/public/Release/badge/5bf414cb-f023-4c36-aba0-c3af1dc61ea1/4/5)
