@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RemoteConfigs.Client.Standa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RemoteConfigs.Client.Test", "RemoteConfigs.Client.Test\RemoteConfigs.Client.Test.csproj", "{D0E9D643-A988-40A0-BC76-0B6C01C136DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteConfigs.Client.Domain", "RemoteConfigs.Client.Domain\RemoteConfigs.Client.Domain.csproj", "{CD0E3858-CCAB-4B90-BD67-D1BF23852906}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{D0E9D643-A988-40A0-BC76-0B6C01C136DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0E9D643-A988-40A0-BC76-0B6C01C136DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0E9D643-A988-40A0-BC76-0B6C01C136DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CD0E3858-CCAB-4B90-BD67-D1BF23852906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CD0E3858-CCAB-4B90-BD67-D1BF23852906}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CD0E3858-CCAB-4B90-BD67-D1BF23852906}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CD0E3858-CCAB-4B90-BD67-D1BF23852906}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
