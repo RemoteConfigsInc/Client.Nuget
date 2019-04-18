@@ -20,7 +20,7 @@ namespace RemoteConfigs.Client.Test
         [Test]
         public async Task GetAllConfigsTest()
         {
-            List<ConfigWithSettingsList> allConfigs = await _remoteConfigsRepo.GetAllConfigs();
+            List<ConfigWithSettingsList> allConfigs = await _remoteConfigsRepo.GetAllConfigsAsync();
 
             Assert.NotNull(allConfigs);
             Assert.NotZero(allConfigs.Count);
@@ -31,7 +31,7 @@ namespace RemoteConfigs.Client.Test
         [TestCase("be4671bc")]
         public async Task GetSpecificConfigTest(string uniqueId)
         {
-            ConfigWithSettingsList config = await _remoteConfigsRepo.GetConfig(uniqueId);
+            ConfigWithSettingsList config = await _remoteConfigsRepo.GetConfigAsync(uniqueId);
 
             Assert.NotNull(config);
             Assert.NotNull(config.Settings);
@@ -43,7 +43,7 @@ namespace RemoteConfigs.Client.Test
         [TestCase("be4671bc")]
         public async Task GetConfigAsObjectTest(string uniqueId)
         {
-            ConfigWithSettingObject<Dictionary<string, string>> config = await _remoteConfigsRepo.GetConfigAsObject<Dictionary<string, string>>(uniqueId);
+            ConfigWithSettingObject<Dictionary<string, string>> config = await _remoteConfigsRepo.GetConfigAsObjectAsync<Dictionary<string, string>>(uniqueId);
 
             Assert.NotNull(config);
             Assert.NotNull(config.Settings);
@@ -70,7 +70,7 @@ namespace RemoteConfigs.Client.Test
                 }
             };
 
-            ConfigWithSettingsList config = await _remoteConfigsRepo.CreateConfig(newConfig);
+            ConfigWithSettingsList config = await _remoteConfigsRepo.CreateConfigAsync(newConfig);
 
             Assert.NotNull(config);
             Assert.AreEqual(config.Name, name);
@@ -102,7 +102,7 @@ namespace RemoteConfigs.Client.Test
                 }
             };
 
-            ConfigWithSettingsList config = await _remoteConfigsRepo.UpdateConfig(uniqueId, newConfig);
+            ConfigWithSettingsList config = await _remoteConfigsRepo.UpdateConfigAsync(uniqueId, newConfig);
 
             Assert.NotNull(config);
             Assert.AreEqual(config.Name, name);
@@ -117,7 +117,7 @@ namespace RemoteConfigs.Client.Test
         [TestCase("09ddd3bd")]
         public async Task DeleteConfigTest(string uniqueId)
         {
-            string config = await _remoteConfigsRepo.DeleteConfig(uniqueId);
+            string config = await _remoteConfigsRepo.DeleteConfigAsync(uniqueId);
 
             Assert.NotNull(config);
             Assert.Pass();
