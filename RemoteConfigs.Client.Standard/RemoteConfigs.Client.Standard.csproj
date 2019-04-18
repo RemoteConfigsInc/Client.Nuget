@@ -9,7 +9,8 @@
     <PackageProjectUrl>https://api.remoteconfigs.com/</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageTags>C#, remote, configs, remoteConfigs, RemoteConfigs, Red, Ruby, Red Ruby IT</PackageTags>
-    <Version>1.0.2</Version>
+    <Version>1.1.0</Version>
+    <Description>This is the client library that will help you get up and running with the RemoteConfigs API.</Description>
   </PropertyGroup>
 
   <ItemGroup>

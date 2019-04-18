@@ -6,11 +6,11 @@ namespace RemoteConfigs.Client.Standard.Repository.Interface
 {
     public interface IRemoteConfigsRepository
     {
-        Task<List<ConfigWithSettingsList>> GetAllConfigs();
-        Task<ConfigWithSettingsList> GetConfig(string uniqueId);
-        Task<ConfigWithSettingObject<T>> GetConfigAsObject<T>(string uniqueId);
-        Task<ConfigWithSettingsList> CreateConfig(CreateConfig newConfig);
-        Task<ConfigWithSettingsList> UpdateConfig(string uniqueId, UpdateConfig updatedConfig);
-        Task<string> DeleteConfig(string uniqueId);
+        Task<List<ConfigWithSettingsList>> GetAllConfigsAsync();
+        Task<ConfigWithSettingsList> GetConfigAsync(string uniqueId);
+        Task<ConfigWithSettingObject<T>> GetConfigAsObjectAsync<T>(string uniqueId);
+        Task<ConfigWithSettingsList> CreateConfigAsync(CreateConfig newConfig);
+        Task<ConfigWithSettingsList> UpdateConfigAsync(string uniqueId, UpdateConfig updatedConfig);
+        Task<string> DeleteConfigAsync(string uniqueId);
     }
 }

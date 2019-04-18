@@ -28,7 +28,7 @@ namespace RemoteConfigs.Client.Standard.Repository
             _configurationsUrl = Path.Combine(RemoteConfigsUrl, ConfigurationsEndpoint);
         }
 
-        public async Task<List<ConfigWithSettingsList>> GetAllConfigs()
+        public async Task<List<ConfigWithSettingsList>> GetAllConfigsAsync()
         {
             using (HttpClient client = new HttpClient())
             {
@@ -40,7 +40,7 @@ namespace RemoteConfigs.Client.Standard.Repository
             }
         }
 
-        public async Task<ConfigWithSettingsList> GetConfig(string uniqueId)
+        public async Task<ConfigWithSettingsList> GetConfigAsync(string uniqueId)
         {
             string configurationUrl = Path.Combine(_configurationsUrl, uniqueId);
 
@@ -54,7 +54,7 @@ namespace RemoteConfigs.Client.Standard.Repository
             }
         }
 
-        public async Task<ConfigWithSettingObject<T>> GetConfigAsObject<T>(string uniqueId)
+        public async Task<ConfigWithSettingObject<T>> GetConfigAsObjectAsync<T>(string uniqueId)
         {
             string configurationObjectUrl = Path.Combine(_configurationsUrl, uniqueId, ConfigurationsObjectEndpoint);
 
@@ -68,7 +68,7 @@ namespace RemoteConfigs.Client.Standard.Repository
             }
         }
 
-        public async Task<ConfigWithSettingsList> CreateConfig(CreateConfig newConfig)
+        public async Task<ConfigWithSettingsList> CreateConfigAsync(CreateConfig newConfig)
         {
             string configurationUrl = Path.Combine(_configurationsUrl);
 
@@ -84,7 +84,7 @@ namespace RemoteConfigs.Client.Standard.Repository
             }
         }
 
-        public async Task<ConfigWithSettingsList> UpdateConfig(string uniqueId, UpdateConfig updatedConfig)
+        public async Task<ConfigWithSettingsList> UpdateConfigAsync(string uniqueId, UpdateConfig updatedConfig)
         {
             string configurationUrl = Path.Combine(_configurationsUrl, uniqueId);
 
@@ -100,7 +100,7 @@ namespace RemoteConfigs.Client.Standard.Repository
             }
         }
 
-        public async Task<string> DeleteConfig(string uniqueId)
+        public async Task<string> DeleteConfigAsync(string uniqueId)
         {
             string configurationUrl = Path.Combine(_configurationsUrl, uniqueId);
 
