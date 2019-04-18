@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using RemoteConfigs.Client.Domain.Contract;
+using RemoteConfigs.Client.Standard.Contract;
 using RemoteConfigs.Client.Standard.Repository;
 using RemoteConfigs.Client.Standard.Repository.Interface;
 
