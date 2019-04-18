@@ -6,7 +6,6 @@
 <br />
 
 <div align="center">
-  <h1>This repo is for the Nuget package</h1>
   <h3>
     <a href="https://remoteconfigs.com">
       Website
@@ -16,6 +15,12 @@
 
 <div align="center">
   <sub>RemoteConfigs, Inc. is a <a href="http://redrubyit.co.za">Red Ruby IT (Pty) Ltd.</a> company.</sub>
+</div>
+
+<br>
+
+<div align="center">
+  <h1>This repo is for the Nuget package</h1>
 </div>
 
 <br>
