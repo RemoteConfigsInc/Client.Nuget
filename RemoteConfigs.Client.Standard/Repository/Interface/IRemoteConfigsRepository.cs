@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using RemoteConfigs.Client.Domain.Contract;
+using RemoteConfigs.Client.Standard.Contract;
 
 namespace RemoteConfigs.Client.Standard.Repository.Interface
 {

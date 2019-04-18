@@ -6,7 +6,7 @@ using System.IO;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using RemoteConfigs.Client.Domain.Contract;
+using RemoteConfigs.Client.Standard.Contract;
 
 namespace RemoteConfigs.Client.Standard.Repository
 {
